@@ -1,0 +1,6 @@
+@RoadSafe.API_HostAddress = http://localhost:5204
+
+GET {{RoadSafe.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
