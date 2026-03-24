@@ -58,4 +58,6 @@ public partial class User
     public virtual ICollection<WorkLog> WorkLogs { get; set; } = new List<WorkLog>();
 
     public virtual ICollection<WorkOrder> WorkOrders { get; set; } = new List<WorkOrder>();
+
+    public string PasswordHash { get; set; } = string.Empty;
 }
