@@ -73,9 +73,7 @@ public partial class RoadSafeDbContext : DbContext
 
     public virtual DbSet<WorkOrder> WorkOrders { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-
-        => optionsBuilder.UseSqlServer("Server=LTIN691146\\SQLEXPRESS;Database=RoadSafeDB;Trusted_Connection=True;TrustServerCertificate=True;");
+    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
