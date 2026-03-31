@@ -4,6 +4,8 @@ using RoadSafe.API.Repositories.Interfaces;
 using RoadSafe.API.Repositories.Implementations;
 using RoadSafe.API.Services.Interfaces;
 using RoadSafe.API.Services.Implementations;
+using RoadSafe.TimingPlanModule.Repositories;
+using RoadSafe.TimingPlanModule.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +25,9 @@ builder.Services.AddDbContext<RoadSafeDbContext>(options =>
 // This tells .NET how to find your custom Services and Repositories!
 builder.Services.AddScoped<IAssetRegistryRepository, AssetRegistryRepository>();
 builder.Services.AddScoped<IAssetRegistryService, AssetRegistryService>();
+builder.Services.AddScoped<ITimingPlanRepository, TimingPlanRepository>();
+builder.Services.AddScoped<ITimingPlanService, TimingPlanService>();
+builder.Services.AddScoped<ITrafficLogicService, TrafficLogicService>();
 
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAngularApp",
